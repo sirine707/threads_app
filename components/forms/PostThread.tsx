@@ -72,14 +72,14 @@ function PostThread({userId}:{userId:string}) {
        <Form {...form}>
         <form 
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-8 ">
+        className="mt-10 flex flex-col justify-start gap-10 ">
         <FormField 
             control={form.control}
             name="thread"
             render={({ field }) => (
-              <FormItem className="flex flex-col items-start  gap-4 mx-5 ">
-                <FormLabel className="text-base-semibold text-light-2">
-                Thread 
+              <FormItem className="flex flex-col items-start w-full gap-3">
+                <FormLabel className="text-base-semibold text-light-2 head-text">
+                Thread ...
                 </FormLabel>
                 <FormControl className="flex-1 text-base text-gray-200 bg-slate-900 no-focus">
                 <textarea
@@ -91,8 +91,12 @@ function PostThread({userId}:{userId:string}) {
               </FormItem>
             )}
           />
+          
           <Button type="submit"
-          className="w-full bg-gradient-to-r from-green-400 to-blue-500 ">Post </Button>
+          className=" bg-gradient-to-r from-green-400 to-blue-500 w-full ">Post 
+          </Button>
+          
+          
 
         </form>
 

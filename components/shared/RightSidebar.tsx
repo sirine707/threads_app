@@ -43,10 +43,10 @@ async function  RightSidebar(){
 
             </div>
             <div className="mt-12 h-0.5 w-full bg-gradient-to-r from-green-400 to-blue-500"/>
-            <div className="flex flex-1 flex-col justify-start">
+            <div className="flex flex-1 flex-col justify-start ">
                 {similarMinds.users.length ?(
                     <>
-                    <div className="w-[100] flex flex-col mt-0 ">
+                    <div className="w-[100] flex flex-col mt-7">
                     {similarMinds.users.map((user)=>(
                         <UserCard
                         key={user.id}
