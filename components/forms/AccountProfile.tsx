@@ -24,7 +24,7 @@
     interface Props{
         user:{
             id:string;
-            objectId:string;
+            objectId:any;
             username:string;
             name:string;
             bio:string;
@@ -85,12 +85,12 @@
       }
       await updateUser (
         {
+          name: values.name,
+          path: pathname,
+          username: values.username,
           userId: user.id,
-        username:values.username,
-        name: values.name,
-        bio: values.bio,
-        image:values.profile_photo,
-        path:pathname
+          bio: values.bio,
+          image: values.profile_photo,
         }
       )
       if (pathname === "/profile/edit") {

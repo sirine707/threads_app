@@ -11,7 +11,7 @@ interface Props {
     personType: string;
   }
   
-  function UserCard({ id, name, username, imgUrl, personType }: Props) {
+function UserCard({ id, name, username, imgUrl, personType }: Props) {
   const router =useRouter()
     return (
     <article className="user-card">
