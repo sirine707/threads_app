@@ -13,9 +13,10 @@ interface Props {
   
 function UserCard({ id, name, username, imgUrl, personType }: Props) {
   const router =useRouter()
+  const isCommunity = personType === "Community";
     return (
-    <article className="user-card">
-        <div className="user-card_avatar">
+    <article className="user-card ">
+        <div className="user-card_avatar mt-4">
             <Image
             src={imgUrl}
             alt="logo"
@@ -28,8 +29,13 @@ function UserCard({ id, name, username, imgUrl, personType }: Props) {
 
             </div>
         </div>
-        <Button onClick={()=>{
-            router.push(`/profile/${id}`)
+        <Button 
+        onClick={() => {
+          if (isCommunity) {
+            router.push(`/communities/${id}`);
+          } else {
+            router.push(`/profile/${id}`);
+          }
         }}
         className="bg-gradient-to-r from-green-400 to-blue-500 px-7">
             View
